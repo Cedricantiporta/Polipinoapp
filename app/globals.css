@@ -10,6 +10,7 @@
   --ink: #2e332b;
   --ink-soft: #5c6653;
   --rule: rgba(46, 51, 43, 0.16);
+  --gold: #b9925a;
 
   --background: var(--clean);
   --foreground: var(--ink);
@@ -30,11 +31,37 @@
   --color-ink-soft: var(--ink-soft);
   --color-rule: var(--rule);
   --color-surface: var(--surface);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-libre-franklin);
+  --font-serif: var(--font-fraunces);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    animation: none;
+  }
 }

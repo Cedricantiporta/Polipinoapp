@@ -1,0 +1,21 @@
+import Link from "next/link";
+
+export function UtilityBar() {
+  return (
+    <div className="bg-ink px-4 py-2 text-[11px] font-medium uppercase tracking-wider text-clean/80 sm:px-8">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+        <p className="italic normal-case tracking-normal text-clean/90">
+          Ship memories. Deliver love.
+        </p>
+        <div className="flex items-center gap-5">
+          <Link href="/track" className="hover:text-clean">
+            Track a Padala
+          </Link>
+          <a href="mailto:hello@polipinopinas.com" className="hidden hover:text-clean sm:inline">
+            Need Help?
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
