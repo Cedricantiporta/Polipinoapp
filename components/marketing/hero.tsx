@@ -79,7 +79,7 @@ export function Hero() {
           <Reveal delay={400}>
             <div className="mt-10 grid grid-cols-1 divide-y divide-rule sm:grid-cols-3 sm:gap-x-6 sm:divide-x sm:divide-y-0">
               {badges.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 py-4 sm:py-0 sm:pl-6 sm:first:pl-0">
+                <div key={title} className="flex items-start gap-3 py-4 sm:py-0">
                   <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss-text" />
                   <div>
                     <p className="text-sm font-semibold text-ink">{title}</p>
