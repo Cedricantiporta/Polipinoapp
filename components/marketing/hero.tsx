@@ -12,12 +12,12 @@ const badges = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-clean">
-      <div className="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
+      <div className="absolute inset-y-0 right-0 hidden w-[52%] lg:block">
         <Image
           src="/Hero_image.jpg"
           alt="A Poli Pino Pinas balikbayan box, ready to ship"
           fill
-          sizes="(min-width: 1024px) 58vw, 0px"
+          sizes="(min-width: 1024px) 52vw, 0px"
           className="object-cover"
           priority
           style={{
@@ -27,7 +27,7 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-y-12 px-6 py-16 lg:grid-cols-[440px_1fr] lg:gap-x-10 lg:px-12 lg:py-20">
+      <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-y-12 px-6 py-14 lg:grid-cols-[560px_1fr] lg:gap-x-10 lg:px-12 lg:py-16">
         <div>
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
@@ -67,13 +67,13 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="mt-10 grid grid-cols-1 divide-y divide-rule sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="mt-10 grid grid-cols-1 divide-y divide-rule sm:grid-cols-3 sm:gap-x-6 sm:divide-x sm:divide-y-0">
               {badges.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 py-4 sm:py-0 sm:pl-4 sm:first:pl-0">
+                <div key={title} className="flex items-start gap-3 py-4 sm:py-0 sm:pl-6 sm:first:pl-0">
                   <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss-text" />
                   <div>
                     <p className="text-sm font-semibold text-ink">{title}</p>
-                    <p className="text-xs text-ink-soft">{desc}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-ink-soft">{desc}</p>
                   </div>
                 </div>
               ))}

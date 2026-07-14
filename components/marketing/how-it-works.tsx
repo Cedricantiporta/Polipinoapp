@@ -44,7 +44,7 @@ export function HowItWorks() {
               <Reveal key={title} delay={i * 100}>
                 <div className="flex flex-col items-center gap-4 text-center">
                   <div className="flex h-24 w-24 items-center justify-center rounded-full bg-surface text-moss-text">
-                    <Icon className="h-9 w-9" strokeWidth={1.25} />
+                    <Icon className="h-12 w-12" strokeWidth={1.25} />
                   </div>
                   <div>
                     <p className="font-serif text-lg font-semibold text-ink">
