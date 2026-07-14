@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/dropoff", label: "Send a Package" },
   { href: "/track", label: "Track a Package" },
-  { href: "#how-it-works", label: "How It Works" },
+  { href: "/#how-it-works", label: "How It Works" },
 ];
 
 export function SiteHeader() {
@@ -30,13 +30,8 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink-soft md:flex">
           {navItems.map((item) => {
-            const isAnchor = item.href.startsWith("#");
-            const active = !isAnchor && pathname === item.href;
-            return isAnchor ? (
-              <a key={item.href} href={item.href} className="hover:text-ink">
-                {item.label}
-              </a>
-            ) : (
+            const active = !item.href.includes("#") && pathname === item.href;
+            return (
               <Link
                 key={item.href}
                 href={item.href}

@@ -4,7 +4,17 @@ import { Reveal } from "./reveal";
 import { ShieldIcon, TruckIcon, HeartIcon, BoxIcon, MapPinIcon } from "./icons";
 
 const badges = [
-  { icon: ShieldIcon, title: "Safe & Secure", desc: "Your package is in good hands" },
+  {
+    icon: ShieldIcon,
+    title: "Safe & Secure",
+    desc: (
+      <>
+        Your package is
+        <br />
+        in good hands
+      </>
+    ),
+  },
   { icon: TruckIcon, title: "Door-to-Door", desc: "Convenient delivery to your loved ones" },
   { icon: HeartIcon, title: "Built on Trust", desc: "Years of service, millions of smiles" },
 ];

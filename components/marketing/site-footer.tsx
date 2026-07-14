@@ -55,9 +55,9 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-moss-text">
+                <Link href="/#how-it-works" className="hover:text-moss-text">
                   How It Works
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
