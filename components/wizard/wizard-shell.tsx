@@ -19,26 +19,32 @@ export function WizardShell() {
     <div className="flex flex-1 flex-col bg-clean">
       <SiteChrome />
       <main className="flex-1">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-6 py-12 lg:grid-cols-[340px_1fr] lg:gap-16 lg:px-12 lg:py-16">
+        <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 px-6 py-6 lg:grid-cols-[340px_1fr] lg:gap-16 lg:px-12 lg:py-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
-              Send a Package
-            </p>
-            <h1 className="mt-3 font-serif text-4xl font-medium italic text-ink">
-              Let&apos;s get your padala moving
-            </h1>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-mid">
-              Fill out the form on the right with the recipient&apos;s details,
-              what&apos;s in the box, and how you&apos;ll drop it off. Your progress
-              is saved automatically, so it&apos;s safe to come back and finish
-              later.
-            </p>
+            <div className="hidden lg:block">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
+                Send a Package
+              </p>
+              <h1 className="mt-3 font-serif text-4xl font-medium italic text-ink">
+                Let&apos;s get your padala moving
+              </h1>
+              <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-mid">
+                Fill out the form on the right with the recipient&apos;s details,
+                what&apos;s in the box, and how you&apos;ll drop it off. Your
+                progress is saved automatically, so it&apos;s safe to come back
+                and finish later.
+              </p>
+            </div>
 
-            <div className="mt-10">
+            <div className="lg:hidden">
+              <Stepper step={step} orientation="horizontal" />
+            </div>
+
+            <div className="mt-10 hidden lg:block">
               <Stepper step={step} />
             </div>
 
-            <div className="mt-4 flex items-start gap-3 rounded-lg border border-rule bg-surface p-4">
+            <div className="mt-4 hidden items-start gap-3 rounded-lg border border-rule bg-surface p-4 lg:flex">
               <ShieldIcon className="mt-0.5 h-5 w-5 shrink-0 text-moss-text" />
               <p className="text-xs leading-relaxed text-ink-soft">
                 Safe &amp; secure — your details are only used to prepare your
@@ -48,7 +54,7 @@ export function WizardShell() {
 
             <Link
               href="/"
-              className="mt-6 inline-block text-xs font-semibold uppercase tracking-wide text-ink-soft hover:text-ink"
+              className="mt-6 hidden text-xs font-semibold uppercase tracking-wide text-ink-soft hover:text-ink lg:inline-block"
             >
               Cancel and return home
             </Link>
