@@ -29,7 +29,7 @@ export function CookieBanner() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-rule bg-surface/95 p-4 backdrop-blur sm:p-5">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs leading-relaxed text-ink-soft">
           We use your browser&apos;s local storage only to save your in-progress
           drop-off form so you don&apos;t lose it on refresh — nothing is sent to a

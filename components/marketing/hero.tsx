@@ -4,15 +4,15 @@ import { Reveal } from "./reveal";
 import { ShieldIcon, TruckIcon, HeartIcon } from "./icons";
 
 const badges = [
-  { icon: ShieldIcon, title: "Safe & Secure", desc: "Your box is in good hands" },
+  { icon: ShieldIcon, title: "Safe & Secure", desc: "Your package is in good hands" },
   { icon: TruckIcon, title: "Door-to-Branch", desc: "Convenient drop-off, done online" },
   { icon: HeartIcon, title: "Built on Trust", desc: "Packed and sent with care" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:gap-8">
+    <section className="relative overflow-hidden bg-clean">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-y-12 px-6 py-16 lg:grid-cols-[440px_1fr] lg:gap-x-10 lg:px-12 lg:py-20">
         <div>
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
@@ -20,16 +20,16 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="mt-4 text-balance font-serif text-5xl font-medium italic leading-[1.05] text-ink sm:text-6xl lg:text-[4rem]">
+            <h1 className="mt-4 text-balance font-serif text-6xl font-bold leading-[1.02] text-ink sm:text-7xl">
               Send love
               <br />
               across borders
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">
-              Balikbayan boxes filled with care. Fill out your forms and generate your
-              shipping label online — before you even leave the house.
+            <p className="mt-6 max-w-md text-base leading-relaxed text-ink-mid">
+              Balikbayan boxes filled with care. Delivered safely to the people who
+              matter most.
             </p>
           </Reveal>
           <Reveal delay={300}>
@@ -50,9 +50,9 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="mt-12 grid grid-cols-1 gap-5 border-t border-rule pt-6 sm:grid-cols-3">
+            <div className="mt-10 grid grid-cols-1 divide-y divide-rule overflow-hidden rounded-2xl border border-rule bg-surface shadow-sm sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {badges.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3">
+                <div key={title} className="flex items-start gap-3 p-4">
                   <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss-text" />
                   <div>
                     <p className="text-sm font-semibold text-ink">{title}</p>
@@ -65,16 +65,20 @@ export function Hero() {
         </div>
 
         <Reveal delay={200} className="relative hidden lg:block">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-home shadow-xl">
+          <div className="relative aspect-[16/11] overflow-hidden rounded-[2rem] bg-home">
             <Image
               src="/hero-box.png"
               alt="A Poli Pino Pinas balikbayan box, ready to ship"
               fill
-              sizes="(min-width: 1024px) 40vw, 0px"
+              sizes="(min-width: 1024px) 55vw, 0px"
               className="object-cover"
               priority
+              style={{
+                maskImage: "linear-gradient(to right, transparent, black 12%)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, black 12%)",
+              }}
             />
-            <div className="absolute inset-x-8 bottom-8 rounded-2xl bg-surface/90 p-4 shadow-lg backdrop-blur">
+            <div className="absolute inset-x-10 bottom-8 rounded-2xl bg-surface/90 p-4 shadow-lg backdrop-blur">
               <p className="font-serif text-sm italic text-ink">
                 &ldquo;We connect families. We deliver what matters most.&rdquo;
               </p>

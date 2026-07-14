@@ -4,16 +4,18 @@
   /* Brand palette */
   --moss: #a7b89f;
   --green-mist: #d7dcd1;
-  --clean: #f4f1e8;
+  --clean: #faf8f2;
   --sky: #adc7c8;
   --home: #e3ddcf;
   --ink: #2e332b;
   --ink-soft: #5c6653;
-  --rule: rgba(46, 51, 43, 0.16);
+  --ink-mid: #454d3f;
+  --rule: rgba(46, 51, 43, 0.14);
   --gold: #b9925a;
   --forest: #33473a;
   --forest-dark: #263529;
   --moss-text: #5e7255;
+  --sage: #8ea484;
 
   --background: var(--clean);
   --foreground: var(--ink);
@@ -32,12 +34,14 @@
   --color-home: var(--home);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
+  --color-ink-mid: var(--ink-mid);
   --color-rule: var(--rule);
   --color-surface: var(--surface);
   --color-gold: var(--gold);
   --color-forest: var(--forest);
   --color-forest-dark: var(--forest-dark);
   --color-moss-text: var(--moss-text);
+  --color-sage: var(--sage);
   --font-sans: var(--font-libre-franklin);
   --font-serif: var(--font-cormorant);
 }

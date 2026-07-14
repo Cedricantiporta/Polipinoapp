@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export function UtilityBar() {
   return (
-    <div className="bg-ink px-4 py-2 text-[11px] font-medium uppercase tracking-wider text-clean/80 sm:px-8">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+    <div className="bg-ink px-6 py-2 text-[11px] font-medium uppercase tracking-wider text-clean/80 lg:px-12">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-4">
         <p className="italic normal-case tracking-normal text-clean/90">
           Ship memories. Deliver love.
         </p>

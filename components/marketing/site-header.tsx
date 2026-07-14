@@ -15,14 +15,14 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-rule/70 bg-clean/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-8">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-6 py-4 lg:px-12">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.svg" alt="" width={40} height={40} />
+          <Image src="/logo-sage.svg" alt="" width={40} height={40} />
           <span className="flex flex-col leading-none">
             <span className="font-serif text-lg tracking-wide text-ink">
               POLI PINO PINAS
             </span>
-            <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-soft">
+            <span className="mt-1 whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.1em] text-sage sm:tracking-[0.22em]">
               Balikbayan Express
             </span>
           </span>
@@ -54,7 +54,7 @@ export function SiteHeader() {
 
         <Link
           href="/dropoff"
-          className="rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-forest-dark"
+          className="shrink-0 whitespace-nowrap rounded-full bg-forest px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-forest-dark sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Send a Padala
         </Link>
