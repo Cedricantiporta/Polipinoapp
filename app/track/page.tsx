@@ -8,7 +8,7 @@ export default function TrackPage() {
     <div className="flex flex-1 flex-col bg-clean">
       <SiteChrome />
       <main className="flex-1">
-        <section className="mx-auto max-w-lg px-4 py-20 text-center sm:px-8">
+        <section className="mx-auto max-w-2xl px-4 py-20 text-center sm:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
             Track a Padala
           </p>
