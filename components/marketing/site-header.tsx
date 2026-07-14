@@ -1,7 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { href: "/dropoff", label: "Send a Package" },
+  { href: "/track", label: "Track a Package" },
+  { href: "#how-it-works", label: "How It Works" },
+];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="border-b border-rule/70 bg-clean/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-4 sm:px-8">
@@ -18,15 +29,27 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink-soft md:flex">
-          <Link href="/dropoff" className="text-ink underline decoration-moss decoration-2 underline-offset-8">
-            Send a Package
-          </Link>
-          <a href="#how-it-works" className="hover:text-ink">
-            How It Works
-          </a>
-          <Link href="/track" className="hover:text-ink">
-            Track a Package
-          </Link>
+          {navItems.map((item) => {
+            const isAnchor = item.href.startsWith("#");
+            const active = !isAnchor && pathname === item.href;
+            return isAnchor ? (
+              <a key={item.href} href={item.href} className="hover:text-ink">
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={
+                  active
+                    ? "text-ink underline decoration-moss decoration-2 underline-offset-8"
+                    : "hover:text-ink"
+                }
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <Link

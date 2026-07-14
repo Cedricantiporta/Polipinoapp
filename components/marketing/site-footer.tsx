@@ -57,6 +57,14 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-rule pt-6 text-xs text-ink-soft sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Poli Pino Pinas. Filipino Cultural Store.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-moss">
+              Privacy Policy
+            </Link>
+            <Link href="/tos" className="hover:text-moss">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

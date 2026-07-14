@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant, Libre_Franklin } from "next/font/google";
+import { CookieBanner } from "@/components/marketing/cookie-banner";
 import "./globals.css";
 
 const cormorant = Cormorant({
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

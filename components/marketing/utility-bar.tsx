@@ -8,12 +8,12 @@ export function UtilityBar() {
           Ship memories. Deliver love.
         </p>
         <div className="flex items-center gap-5">
-          <Link href="/track" className="hover:text-clean">
-            Track a Padala
-          </Link>
           <a href="mailto:hello@polipinopinas.com" className="hidden hover:text-clean sm:inline">
             Need Help?
           </a>
+          <Link href="/login" className="hover:text-clean">
+            Log In
+          </Link>
         </div>
       </div>
     </div>

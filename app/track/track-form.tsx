@@ -2,28 +2,14 @@
 
 import { useState } from "react";
 import { SearchIcon } from "@/components/marketing/icons";
+import { TrackingTimeline } from "./tracking-timeline";
 
 export function TrackForm() {
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
-    return (
-      <div className="rounded-2xl border border-rule bg-surface p-6 text-left">
-        <p className="text-sm font-semibold text-ink">
-          Thanks — we&apos;ve noted reference{" "}
-          <span className="text-moss">{value || "(none entered)"}</span>.
-        </p>
-        <p className="mt-2 text-sm text-ink-soft">
-          Live tracking isn&apos;t connected yet, so this doesn&apos;t look anything up
-          automatically. Email us at{" "}
-          <a href="mailto:hello@polipinopinas.com" className="font-semibold text-moss">
-            hello@polipinopinas.com
-          </a>{" "}
-          with this reference number and we&apos;ll follow up directly.
-        </p>
-      </div>
-    );
+    return <TrackingTimeline reference={value} />;
   }
 
   return (

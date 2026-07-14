@@ -64,26 +64,21 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-gradient-to-br from-home via-clean to-sky/60">
+        <Reveal delay={200} className="relative hidden lg:block">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-home shadow-xl">
             <Image
-              src="/logo.svg"
-              alt=""
+              src="/hero-box.png"
+              alt="A Poli Pino Pinas balikbayan box, ready to ship"
               fill
-              className="scale-[2.2] object-contain opacity-[0.14] mix-blend-multiply"
-              style={{ transform: "scale(2.2) rotate(-6deg)" }}
+              sizes="(min-width: 1024px) 40vw, 0px"
+              className="object-cover"
+              priority
             />
             <div className="absolute inset-x-8 bottom-8 rounded-2xl bg-surface/90 p-4 shadow-lg backdrop-blur">
               <p className="font-serif text-sm italic text-ink">
                 &ldquo;We connect families. We deliver what matters most.&rdquo;
               </p>
             </div>
-          </div>
-          <div className="absolute -left-6 top-8 hidden rounded-2xl bg-surface px-4 py-3 shadow-lg sm:block">
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-ink-soft">
-              Reference No.
-            </p>
-            <p className="font-serif text-lg text-ink">PPP-XXXXXX</p>
           </div>
         </Reveal>
       </div>

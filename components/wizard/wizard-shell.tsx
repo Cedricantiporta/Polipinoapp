@@ -17,12 +17,12 @@ export function WizardShell() {
     <div className="flex min-h-screen flex-col bg-clean">
       <header className="bg-moss px-4 pb-6 pt-5 sm:px-8">
         <div className="mx-auto flex max-w-2xl items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/logo.svg" alt="" width={28} height={28} className="invert" />
             <h1 className="font-serif text-lg text-white sm:text-xl">
               Drop Off Package
             </h1>
-          </div>
+          </Link>
           <Link
             href="/"
             className="text-xs font-semibold uppercase tracking-wide text-white/80 hover:text-white"
