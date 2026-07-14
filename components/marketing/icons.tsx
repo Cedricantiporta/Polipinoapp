@@ -60,8 +60,8 @@ export function BoxIcon(props: SVGProps<SVGSVGElement>) {
 export function TagIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg {...base} {...props}>
-      <path d="M12.5 3H4v8.5L14.5 22 21 15.5 10.5 5H12.5Z" transform="translate(1 0)" />
-      <circle cx="8.3" cy="8.3" r="1.2" />
+      <path d="M11.6 3H5.5A2.5 2.5 0 0 0 3 5.5v6.1c0 .66.26 1.3.73 1.77l8.9 8.9a2.5 2.5 0 0 0 3.54 0l5.9-5.9a2.5 2.5 0 0 0 0-3.54l-8.9-8.9A2.5 2.5 0 0 0 11.6 3Z" />
+      <circle cx="7.75" cy="7.75" r="1.25" />
     </svg>
   );
 }

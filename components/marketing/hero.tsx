@@ -12,7 +12,22 @@ const badges = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-clean">
-      <div className="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-y-12 px-6 py-16 lg:grid-cols-[440px_1fr] lg:gap-x-10 lg:px-12 lg:py-20">
+      <div className="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
+        <Image
+          src="/hero-box.png"
+          alt="A Poli Pino Pinas balikbayan box, ready to ship"
+          fill
+          sizes="(min-width: 1024px) 58vw, 0px"
+          className="object-cover"
+          priority
+          style={{
+            maskImage: "linear-gradient(to right, transparent, black 30%)",
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 30%)",
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-y-12 px-6 py-16 lg:grid-cols-[440px_1fr] lg:gap-x-10 lg:px-12 lg:py-20">
         <div>
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
@@ -36,7 +51,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/dropoff"
-                className="rounded-full bg-forest px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-forest-dark"
+                className="rounded-full bg-sage px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-moss-text"
               >
                 Send a Padala
               </Link>
@@ -64,27 +79,7 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative hidden lg:block">
-          <div className="relative aspect-[16/11] overflow-hidden rounded-[2rem] bg-home">
-            <Image
-              src="/hero-box.png"
-              alt="A Poli Pino Pinas balikbayan box, ready to ship"
-              fill
-              sizes="(min-width: 1024px) 55vw, 0px"
-              className="object-cover"
-              priority
-              style={{
-                maskImage: "linear-gradient(to right, transparent, black 12%)",
-                WebkitMaskImage: "linear-gradient(to right, transparent, black 12%)",
-              }}
-            />
-            <div className="absolute inset-x-10 bottom-8 rounded-2xl bg-surface/90 p-4 shadow-lg backdrop-blur">
-              <p className="font-serif text-sm italic text-ink">
-                &ldquo;We connect families. We deliver what matters most.&rdquo;
-              </p>
-            </div>
-          </div>
-        </Reveal>
+        <div aria-hidden className="hidden lg:block" />
       </div>
     </section>
   );

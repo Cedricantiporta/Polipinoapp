@@ -43,14 +43,13 @@ export function HowItWorks() {
             {steps.map(({ icon: Icon, title, desc }, i) => (
               <Reveal key={title} delay={i * 100}>
                 <div className="flex flex-col items-center gap-4 text-center">
-                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-surface text-moss-text shadow-md ring-8 ring-green-mist/50">
+                  <div className="flex h-24 w-24 items-center justify-center rounded-full bg-surface text-moss-text">
                     <Icon className="h-9 w-9" strokeWidth={1.25} />
                   </div>
                   <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-gold">
-                      Step {i + 1}
+                    <p className="font-serif text-lg font-semibold text-ink">
+                      {i + 1}. {title}
                     </p>
-                    <p className="mt-1 font-serif text-lg font-semibold text-ink">{title}</p>
                     <p className="mt-1 max-w-[16rem] text-sm text-ink-soft">{desc}</p>
                   </div>
                 </div>
