@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Reveal } from "./reveal";
-import { ShieldIcon, TruckIcon, HeartIcon } from "./icons";
+import { ShieldIcon, TruckIcon, HeartIcon, BoxIcon, MapPinIcon } from "./icons";
 
 const badges = [
   { icon: ShieldIcon, title: "Safe & Secure", desc: "Your package is in good hands" },
-  { icon: TruckIcon, title: "Door-to-Branch", desc: "Convenient drop-off, done online" },
-  { icon: HeartIcon, title: "Built on Trust", desc: "Packed and sent with care" },
+  { icon: TruckIcon, title: "Door-to-Door", desc: "Convenient delivery to your loved ones" },
+  { icon: HeartIcon, title: "Built on Trust", desc: "Years of service, millions of smiles" },
 ];
 
 export function Hero() {
@@ -14,7 +14,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-clean">
       <div className="absolute inset-y-0 right-0 hidden w-[58%] lg:block">
         <Image
-          src="/hero-box.png"
+          src="/Hero_image.jpg"
           alt="A Poli Pino Pinas balikbayan box, ready to ship"
           fill
           sizes="(min-width: 1024px) 58vw, 0px"
@@ -51,23 +51,25 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/dropoff"
-                className="rounded-full bg-sage px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-moss-text"
+                className="inline-flex items-center gap-2 rounded-lg bg-sage px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-moss-text"
               >
+                <BoxIcon className="h-5 w-5" strokeWidth={1.75} />
                 Send a Padala
               </Link>
               <Link
                 href="/track"
-                className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-moss hover:text-moss-text"
+                className="inline-flex items-center gap-2 rounded-lg border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-moss hover:text-moss-text"
               >
+                <MapPinIcon className="h-5 w-5" strokeWidth={1.75} />
                 Track a Padala
               </Link>
             </div>
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="mt-10 grid grid-cols-1 divide-y divide-rule overflow-hidden rounded-2xl border border-rule bg-surface shadow-sm sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <div className="mt-10 grid grid-cols-1 divide-y divide-rule sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               {badges.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 p-4">
+                <div key={title} className="flex items-start gap-3 py-4 sm:py-0 sm:pl-4 sm:first:pl-0">
                   <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss-text" />
                   <div>
                     <p className="text-sm font-semibold text-ink">{title}</p>
