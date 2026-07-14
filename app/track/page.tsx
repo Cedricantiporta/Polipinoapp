@@ -14,7 +14,7 @@ export default function TrackPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             Track a Padala
           </p>
-          <h1 className="mt-3 font-serif text-4xl italic text-ink">
+          <h1 className="mt-3 font-serif text-4xl font-medium italic text-ink">
             Where&apos;s your box?
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-ink-soft">

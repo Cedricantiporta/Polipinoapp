@@ -20,7 +20,7 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="mt-4 text-balance font-serif text-5xl italic leading-[1.05] text-ink sm:text-6xl lg:text-[4rem]">
+            <h1 className="mt-4 text-balance font-serif text-5xl font-medium italic leading-[1.05] text-ink sm:text-6xl lg:text-[4rem]">
               Send love
               <br />
               across borders
@@ -36,7 +36,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/dropoff"
-                className="rounded-full bg-moss px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-moss/90"
+                className="rounded-full bg-forest px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-forest-dark"
               >
                 Send a Padala
               </Link>

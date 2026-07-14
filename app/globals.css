@@ -11,6 +11,8 @@
   --ink-soft: #5c6653;
   --rule: rgba(46, 51, 43, 0.16);
   --gold: #b9925a;
+  --forest: #33473a;
+  --forest-dark: #263529;
 
   --background: var(--clean);
   --foreground: var(--ink);
@@ -32,8 +34,10 @@
   --color-rule: var(--rule);
   --color-surface: var(--surface);
   --color-gold: var(--gold);
+  --color-forest: var(--forest);
+  --color-forest-dark: var(--forest-dark);
   --font-sans: var(--font-libre-franklin);
-  --font-serif: var(--font-fraunces);
+  --font-serif: var(--font-cormorant);
 }
 
 body {

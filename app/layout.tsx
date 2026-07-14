@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, Libre_Franklin } from "next/font/google";
+import { Cormorant, Libre_Franklin } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const cormorant = Cormorant({
+  variable: "--font-cormorant",
   subsets: ["latin"],
   style: ["normal", "italic"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const libreFranklin = Libre_Franklin({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${libreFranklin.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${libreFranklin.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}

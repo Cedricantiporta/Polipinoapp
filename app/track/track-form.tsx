@@ -43,7 +43,7 @@ export function TrackForm() {
       />
       <button
         type="submit"
-        className="shrink-0 rounded-full bg-moss px-5 py-2.5 text-sm font-semibold text-white hover:bg-moss/90"
+        className="shrink-0 rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white hover:bg-forest-dark"
       >
         Track
       </button>

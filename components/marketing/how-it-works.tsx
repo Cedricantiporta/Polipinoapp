@@ -32,7 +32,7 @@ export function HowItWorks() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
             How It Works
           </p>
-          <h2 className="mt-3 max-w-lg text-balance font-serif text-4xl italic text-ink">
+          <h2 className="mt-3 max-w-lg text-balance font-serif text-4xl font-medium italic text-ink">
             Sending a package is easy
           </h2>
         </Reveal>
