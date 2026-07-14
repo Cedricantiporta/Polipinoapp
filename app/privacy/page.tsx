@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       <SiteChrome />
       <main className="flex-1">
         <article className="mx-auto max-w-2xl px-4 py-16 text-sm leading-relaxed text-ink-soft sm:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
             Legal
           </p>
           <h1 className="mt-3 font-serif text-4xl font-medium italic text-ink">
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
               <h2 className="mb-2 font-serif text-lg text-ink">Contact</h2>
               <p>
                 Questions about this policy:{" "}
-                <a href="mailto:hello@polipinopinas.com" className="font-semibold text-moss">
+                <a href="mailto:hello@polipinopinas.com" className="font-semibold text-moss-text">
                   hello@polipinopinas.com
                 </a>
               </p>

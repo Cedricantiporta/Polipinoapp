@@ -68,7 +68,7 @@ export function Step5Review() {
   if (done) {
     return (
       <div className="flex flex-col items-center gap-4 py-10 text-center">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-moss/15 text-2xl text-moss">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-moss/15 text-2xl text-moss-text">
           ✓
         </div>
         <h2 className="font-serif text-2xl text-ink">Label Generated</h2>
@@ -84,7 +84,7 @@ export function Step5Review() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-moss">
+        <p className="text-xs font-semibold uppercase tracking-wider text-moss-text">
           Step 5
         </p>
         <h2 className="mt-1 font-serif text-2xl text-ink">Review & Generate Label</h2>

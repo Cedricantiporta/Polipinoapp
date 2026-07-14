@@ -15,7 +15,7 @@ export default function LoginPage() {
       <SiteChrome />
       <main className="flex-1">
         <section className="mx-auto max-w-sm px-4 py-20 sm:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
             Welcome Back
           </p>
           <h1 className="mt-3 font-serif text-4xl font-medium italic text-ink">
@@ -68,7 +68,7 @@ export default function LoginPage() {
 
           <p className="mt-6 text-center text-xs text-ink-soft">
             Don&apos;t have an account yet? Accounts are coming soon —{" "}
-            <Link href="/dropoff" className="font-semibold text-moss">
+            <Link href="/dropoff" className="font-semibold text-moss-text">
               send a package
             </Link>{" "}
             without one for now.

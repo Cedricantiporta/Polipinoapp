@@ -15,7 +15,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-8 sm:py-24 lg:grid-cols-[1.1fr_1fr] lg:gap-8">
         <div>
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
               We Deliver What Matters
             </p>
           </Reveal>
@@ -42,7 +42,7 @@ export function Hero() {
               </Link>
               <Link
                 href="/track"
-                className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-moss hover:text-moss"
+                className="rounded-full border border-ink/20 px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-moss hover:text-moss-text"
               >
                 Track a Padala
               </Link>
@@ -53,7 +53,7 @@ export function Hero() {
             <div className="mt-12 grid grid-cols-1 gap-5 border-t border-rule pt-6 sm:grid-cols-3">
               {badges.map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-3">
-                  <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss" />
+                  <Icon className="mt-0.5 h-6 w-6 shrink-0 text-moss-text" />
                   <div>
                     <p className="text-sm font-semibold text-ink">{title}</p>
                     <p className="text-xs text-ink-soft">{desc}</p>

@@ -47,7 +47,7 @@ export default function AccountPage() {
                 className="flex items-center justify-between rounded-xl border border-rule bg-surface p-4"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-moss/15 text-moss">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-moss/15 text-moss-text">
                     {s.status === "Delivered" ? (
                       <BoxIcon className="h-5 w-5" />
                     ) : (
@@ -62,7 +62,7 @@ export default function AccountPage() {
                 <span
                   className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
                     s.status === "Delivered"
-                      ? "bg-moss/15 text-moss"
+                      ? "bg-moss/15 text-moss-text"
                       : "bg-gold/15 text-gold"
                   }`}
                 >
@@ -92,7 +92,7 @@ export default function AccountPage() {
 
           <Link
             href="/"
-            className="mt-10 inline-block text-xs font-semibold uppercase tracking-wide text-ink-soft hover:text-moss"
+            className="mt-10 inline-block text-xs font-semibold uppercase tracking-wide text-ink-soft hover:text-moss-text"
           >
             Log Out
           </Link>

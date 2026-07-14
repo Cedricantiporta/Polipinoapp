@@ -29,7 +29,7 @@ export function HowItWorks() {
     <section id="how-it-works" className="bg-green-mist/50 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-8">
         <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-moss-text">
             How It Works
           </p>
           <h2 className="mt-3 max-w-lg text-balance font-serif text-4xl font-medium italic text-ink">
@@ -41,7 +41,7 @@ export function HowItWorks() {
           {steps.map(({ icon: Icon, title, desc }, i) => (
             <Reveal key={title} delay={i * 100}>
               <div className="relative flex flex-col items-start gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-surface text-moss shadow-sm">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-surface text-moss-text shadow-sm">
                   <Icon className="h-6 w-6" />
                 </div>
                 <div>

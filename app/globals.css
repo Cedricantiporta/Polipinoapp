@@ -13,6 +13,7 @@
   --gold: #b9925a;
   --forest: #33473a;
   --forest-dark: #263529;
+  --moss-text: #5e7255;
 
   --background: var(--clean);
   --foreground: var(--ink);
@@ -36,6 +37,7 @@
   --color-gold: var(--gold);
   --color-forest: var(--forest);
   --color-forest-dark: var(--forest-dark);
+  --color-moss-text: var(--moss-text);
   --font-sans: var(--font-libre-franklin);
   --font-serif: var(--font-cormorant);
 }

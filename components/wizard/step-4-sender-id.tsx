@@ -53,7 +53,7 @@ export function Step4SenderId() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-moss">
+        <p className="text-xs font-semibold uppercase tracking-wider text-moss-text">
           Step 4
         </p>
         <h2 className="mt-1 font-serif text-2xl text-ink">Sender ID Information</h2>
@@ -108,7 +108,7 @@ export function Step4SenderId() {
             // eslint-disable-next-line @next/next/no-img-element
             <img src={idImageDataUrl} alt="ID preview" className="max-h-40 rounded-md object-contain" />
           ) : (
-            <span className="text-sm font-semibold text-moss">
+            <span className="text-sm font-semibold text-moss-text">
               Tap to capture or upload your ID
             </span>
           )}

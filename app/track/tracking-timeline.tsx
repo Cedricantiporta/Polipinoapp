@@ -40,7 +40,7 @@ export function TrackingTimeline({ reference }: { reference: string }) {
           </p>
           <p className="font-serif text-xl text-ink">{reference || "PPP-XXXXXX"}</p>
         </div>
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-moss/15 text-moss">
+        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-moss/15 text-moss-text">
           <BoxIcon className="h-5 w-5" />
         </div>
       </div>

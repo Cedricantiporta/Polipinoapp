@@ -97,7 +97,7 @@ export function Step1Consignee() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-moss">
+        <p className="text-xs font-semibold uppercase tracking-wider text-moss-text">
           Step 1
         </p>
         <h2 className="mt-1 font-serif text-2xl text-ink">Consignee / Recipient</h2>

@@ -34,7 +34,7 @@ export function CookieBanner() {
           We use your browser&apos;s local storage only to save your in-progress
           drop-off form so you don&apos;t lose it on refresh — nothing is sent to a
           server or used for tracking or advertising. See our{" "}
-          <Link href="/privacy" className="font-semibold text-moss underline">
+          <Link href="/privacy" className="font-semibold text-moss-text underline">
             Privacy Policy
           </Link>
           .

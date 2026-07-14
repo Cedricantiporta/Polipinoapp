@@ -17,7 +17,7 @@ export function Stepper({ step }: { step: number }) {
                   active
                     ? "bg-moss text-white"
                     : done
-                      ? "bg-moss/20 text-moss"
+                      ? "bg-moss/20 text-moss-text"
                       : "bg-white/60 text-ink-soft"
                 }`}
               >

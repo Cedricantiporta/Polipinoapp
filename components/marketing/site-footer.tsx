@@ -24,17 +24,17 @@ export function SiteFooter() {
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm text-ink">
               <li>
-                <Link href="/dropoff" className="hover:text-moss">
+                <Link href="/dropoff" className="hover:text-moss-text">
                   Send a Package
                 </Link>
               </li>
               <li>
-                <Link href="/track" className="hover:text-moss">
+                <Link href="/track" className="hover:text-moss-text">
                   Track a Package
                 </Link>
               </li>
               <li>
-                <a href="#how-it-works" className="hover:text-moss">
+                <a href="#how-it-works" className="hover:text-moss-text">
                   How It Works
                 </a>
               </li>
@@ -47,7 +47,7 @@ export function SiteFooter() {
             </p>
             <ul className="mt-3 flex flex-col gap-2 text-sm text-ink">
               <li>
-                <a href="mailto:hello@polipinopinas.com" className="hover:text-moss">
+                <a href="mailto:hello@polipinopinas.com" className="hover:text-moss-text">
                   hello@polipinopinas.com
                 </a>
               </li>
@@ -58,10 +58,10 @@ export function SiteFooter() {
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-rule pt-6 text-xs text-ink-soft sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Poli Pino Pinas. Filipino Cultural Store.</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-moss">
+            <Link href="/privacy" className="hover:text-moss-text">
               Privacy Policy
             </Link>
-            <Link href="/tos" className="hover:text-moss">
+            <Link href="/tos" className="hover:text-moss-text">
               Terms of Service
             </Link>
           </div>

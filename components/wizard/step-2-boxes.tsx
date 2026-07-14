@@ -171,7 +171,7 @@ export function Step2Boxes() {
         </datalist>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-moss">
+          <p className="text-xs font-semibold uppercase tracking-wider text-moss-text">
             Step 2
           </p>
           <h2 className="mt-1 font-serif text-2xl text-ink">Box Contents</h2>

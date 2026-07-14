@@ -44,7 +44,7 @@ export function Step3Terms() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-moss">
+        <p className="text-xs font-semibold uppercase tracking-wider text-moss-text">
           Step 3
         </p>
         <h2 className="mt-1 font-serif text-2xl text-ink">Terms & Signature</h2>
@@ -95,7 +95,7 @@ export function Step3Terms() {
           <button
             type="button"
             onClick={() => setShowTerms(true)}
-            className="font-semibold text-moss underline underline-offset-2"
+            className="font-semibold text-moss-text underline underline-offset-2"
           >
             Terms and Conditions
           </button>{" "}
@@ -103,7 +103,7 @@ export function Step3Terms() {
           <button
             type="button"
             onClick={() => setShowProhibited(true)}
-            className="font-semibold text-moss underline underline-offset-2"
+            className="font-semibold text-moss-text underline underline-offset-2"
           >
             Prohibited Items List
           </button>
