@@ -22,7 +22,7 @@ export function NewsletterForm() {
         e.preventDefault();
         setSent(true);
       }}
-      className="flex items-center gap-1 rounded-full border border-rule bg-surface p-1 pl-4 shadow-sm"
+      className="flex items-center gap-1 rounded-lg border border-rule bg-surface p-1 pl-4 shadow-sm"
     >
       <input
         type="email"
@@ -35,7 +35,7 @@ export function NewsletterForm() {
       <button
         type="submit"
         aria-label="Sign up"
-        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest text-white hover:bg-forest-dark"
+        className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-forest text-white hover:bg-forest-dark"
       >
         <ArrowRightIcon className="h-4 w-4" />
       </button>

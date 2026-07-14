@@ -54,7 +54,7 @@ export function SiteHeader() {
 
         <Link
           href="/dropoff"
-          className="shrink-0 whitespace-nowrap rounded-full bg-sage px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-moss-text sm:px-5 sm:py-2.5 sm:text-sm"
+          className="shrink-0 whitespace-nowrap rounded-lg bg-sage px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-forest-dark sm:px-5 sm:py-2.5 sm:text-sm"
         >
           Send a Padala
         </Link>

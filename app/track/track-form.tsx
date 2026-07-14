@@ -18,7 +18,7 @@ export function TrackForm() {
         e.preventDefault();
         setSubmitted(true);
       }}
-      className="flex items-center gap-2 rounded-full border border-rule bg-surface p-1.5 pl-5 shadow-sm"
+      className="flex items-center gap-2 rounded-lg border border-rule bg-surface p-1.5 pl-5 shadow-sm"
     >
       <SearchIcon className="h-4 w-4 shrink-0 text-ink-soft" />
       <input
@@ -29,7 +29,7 @@ export function TrackForm() {
       />
       <button
         type="submit"
-        className="shrink-0 rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white hover:bg-forest-dark"
+        className="shrink-0 rounded-md bg-forest px-5 py-2.5 text-sm font-semibold text-white hover:bg-forest-dark"
       >
         Track
       </button>

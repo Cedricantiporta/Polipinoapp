@@ -51,7 +51,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 href="/dropoff"
-                className="inline-flex items-center gap-2 rounded-lg bg-sage px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-moss-text"
+                className="inline-flex items-center gap-2 rounded-lg bg-sage px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-forest-dark"
               >
                 <BoxIcon className="h-5 w-5" strokeWidth={1.75} />
                 Send a Padala

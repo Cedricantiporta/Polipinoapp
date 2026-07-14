@@ -60,7 +60,7 @@ export default function LoginPage() {
             </div>
             <button
               type="submit"
-              className="mt-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white hover:bg-forest-dark"
+              className="mt-2 rounded-lg bg-forest px-6 py-3 text-sm font-semibold text-white hover:bg-forest-dark"
             >
               Log In
             </button>

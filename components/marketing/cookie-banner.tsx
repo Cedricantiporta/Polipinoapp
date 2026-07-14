@@ -42,13 +42,13 @@ export function CookieBanner() {
         <div className="flex shrink-0 items-center gap-2">
           <button
             onClick={() => choose("declined")}
-            className="rounded-full border border-rule px-4 py-2 text-xs font-semibold text-ink-soft hover:border-moss"
+            className="rounded-lg border border-rule px-4 py-2 text-xs font-semibold text-ink-soft hover:border-moss"
           >
             Decline
           </button>
           <button
             onClick={() => choose("accepted")}
-            className="rounded-full bg-forest px-4 py-2 text-xs font-semibold text-white hover:bg-forest-dark"
+            className="rounded-lg bg-forest px-4 py-2 text-xs font-semibold text-white hover:bg-forest-dark"
           >
             Accept
           </button>
