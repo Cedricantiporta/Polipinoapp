@@ -7,8 +7,8 @@ export function UtilityBar() {
         <p className="italic normal-case tracking-normal text-white/95">
           Ship memories. Deliver love.
         </p>
-        <div className="flex items-center gap-5">
-          <a href="mailto:hello@polipinopinas.com" className="hidden hover:text-white sm:inline">
+        <div className="hidden items-center gap-5 md:flex">
+          <a href="mailto:hello@polipinopinas.com" className="hover:text-white">
             Need Help?
           </a>
           <Link href="/login" className="hover:text-white">

@@ -76,7 +76,7 @@ export function Step5Review() {
           Your shipping label has been downloaded. Bring a printed or digital copy of
           it when you drop off your box.
         </p>
-        <Button onClick={resetDraft}>Start New Drop Off</Button>
+        <Button onClick={resetDraft}>Send New Padala</Button>
       </div>
     );
   }
