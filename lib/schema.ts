@@ -60,6 +60,7 @@ export const senderIdSchema = z.object({
   senderFirstName: z.string().min(1, "Sender first name is required"),
   senderLastName: z.string().min(1, "Sender last name is required"),
   senderPhone: z.string().min(7, "Sender phone is required"),
+  senderEmail: z.email("A valid email is required"),
   idType: z.enum(idTypeOptions, { message: "Sender ID type is required" }),
   idNumber: z.string().min(1, "Sender ID number is required"),
   idExpiryDate: z.string().min(1, "Sender ID expiry date is required"),

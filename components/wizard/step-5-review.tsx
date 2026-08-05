@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/lib/pdf/label";
 import type { DropOffSubmission } from "@/lib/schema";
 
+const TRACKING_API_URL =
+  process.env.NEXT_PUBLIC_TRACKING_API_URL ?? "http://localhost:3001";
+
 function generateReferenceNumber() {
   const stamp = Date.now().toString(36).toUpperCase();
   const rand = Math.random().toString(36).slice(2, 6).toUpperCase();
@@ -19,6 +22,7 @@ export function Step5Review() {
   const [generating, setGenerating] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [trackingWarning, setTrackingWarning] = useState<string | null>(null);
 
   const { consignee, boxes, terms, sender } = draft;
   const ready = consignee && terms && sender && boxes.length > 0;
@@ -57,6 +61,24 @@ export function Step5Review() {
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
+
+      try {
+        const res = await fetch(`${TRACKING_API_URL}/api/shipments`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            referenceNumber,
+            recipientName: `${consignee.firstName} ${consignee.lastName}`,
+            senderEmail: sender.senderEmail,
+          }),
+        });
+        if (!res.ok) throw new Error();
+      } catch {
+        setTrackingWarning(
+          "Your label was created, but we couldn't register it with our tracking system. Please contact us with your reference number to make sure your shipment is tracked."
+        );
+      }
+
       setDone(true);
     } catch (e) {
       setError("Something went wrong generating your label. Please try again.");
@@ -76,6 +98,9 @@ export function Step5Review() {
           Your shipping label has been downloaded. Bring a printed or digital copy of
           it when you drop off your box.
         </p>
+        {trackingWarning ? (
+          <p className="max-w-sm text-xs text-red-600">{trackingWarning}</p>
+        ) : null}
         <Button onClick={resetDraft}>Send New Padala</Button>
       </div>
     );

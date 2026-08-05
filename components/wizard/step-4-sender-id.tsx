@@ -73,6 +73,9 @@ export function Step4SenderId() {
         <Field label="Sender Phone" htmlFor="senderPhone" error={errors.senderPhone?.message}>
           <input id="senderPhone" placeholder="+63" className={inputClass(!!errors.senderPhone)} {...register("senderPhone")} />
         </Field>
+        <Field label="Sender Email" htmlFor="senderEmail" error={errors.senderEmail?.message}>
+          <input id="senderEmail" type="email" placeholder="you@example.com" className={inputClass(!!errors.senderEmail)} {...register("senderEmail")} />
+        </Field>
       </div>
 
       <div className="border-t border-rule pt-5">
