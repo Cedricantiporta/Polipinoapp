@@ -6,7 +6,13 @@ import QRCode from "qrcode";
 import { useWizard } from "@/lib/wizard-context";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/lib/pdf/label";
-import type { DropOffSubmission } from "@/lib/schema";
+import {
+  boxSchema,
+  consigneeSchema,
+  senderIdSchema,
+  termsSchema,
+  type DropOffSubmission,
+} from "@/lib/schema";
 
 const TRACKING_API_URL =
   process.env.NEXT_PUBLIC_TRACKING_API_URL ?? "http://localhost:3001";
@@ -25,7 +31,19 @@ export function Step5Review() {
   const [trackingWarning, setTrackingWarning] = useState<string | null>(null);
 
   const { consignee, boxes, terms, sender } = draft;
-  const ready = consignee && terms && sender && boxes.length > 0;
+  // Re-validate against the current schemas, not just truthiness -- a draft
+  // saved in localStorage before a required field was added (e.g. sender
+  // email) would otherwise look "ready" while missing data the API needs.
+  const ready = Boolean(
+    consignee &&
+      consigneeSchema.safeParse(consignee).success &&
+      terms &&
+      termsSchema.safeParse(terms).success &&
+      sender &&
+      senderIdSchema.safeParse(sender).success &&
+      boxes.length > 0 &&
+      boxes.every((box) => boxSchema.safeParse(box).success)
+  );
 
   const grandTotal = boxes.reduce(
     (sum, box) => sum + box.items.reduce((s, i) => s + i.qty * i.price, 0),
